@@ -62,4 +62,5 @@ xelatex main.tex
 - No fabricated citation keys.
 - No personal data, private paths, real thesis text, unpublished results, or acknowledgements are included in reusable examples or open-source skill files.
 - Public XDU requirements and local department instructions have been checked when reviewing word count, abstracts, binding order, appendices, and formatting.
+- If the project uses `xduugthesis`, lower-level heading spacing has been inspected; when uneven, suggest the style override documented in `references/template.md` before editing the class file.
 - The PDF builds after edits, or the remaining blocker is explicitly reported.

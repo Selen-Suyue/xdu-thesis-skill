@@ -47,6 +47,7 @@ Read `references/writing-style.md` before large prose rewrites.
 ### Editing LaTeX Structure
 
 - Keep project metadata in `\xdusetup{ info = {...}, style = {...} }`.
+- For `xduugthesis` projects, preserve or recommend the heading style override in `references/template.md` when lower-level heading spacing is uneven, especially `subsec-zihao`, `subsubsec-zihao`, `before-skip`, and `after-skip`.
 - Prefer `\input{chapters/...}` from `main.tex` for chapter files.
 - Use semantic LaTeX commands for sections, figures, tables, equations, citations, and labels instead of manual formatting.
 - Preserve the template's page layout, headers, captions, bibliography backend, and font configuration unless the user asks to change formatting.

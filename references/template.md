@@ -26,7 +26,11 @@ Do not redistribute local template files, logos, fonts, or sample PDFs through t
 \xdusetup{
   style = {
     cjk-font = fandol,
-    latin-font = gyre
+    latin-font = gyre,
+    subsec-zihao = -4,
+    subsubsec-zihao = -4,
+    before-skip = { 24pt, 18pt, 12pt, 12pt, 12pt, 12pt },
+    after-skip  = { 18pt, 12pt, 12pt, 12pt, 6pt,  6pt  }
   },
   info = {
     title = {中文题目},
@@ -97,6 +101,36 @@ Do not redistribute local template files, logos, fonts, or sample PDFs through t
 - Figure and table names are localized by the template: `图`/`表` in Chinese mode and `Figure`/`Table` in English mode.
 - Equations are numbered by chapter as `chapter-number - equation-number`.
 - Default bibliography handling is `biblatex` with `gb7714-2015` style; `bibtex` mode uses `gbt7714-numerical`.
+
+## Heading Spacing Note
+
+The observed `xduugthesis.cls` exposes heading size and spacing keys and maps them to `ctexset`:
+
+- `chap-zihao`, `sec-zihao`, `subsec-zihao`, `subsubsec-zihao`
+- `before-skip` for chapter, section, subsection, subsubsection, paragraph, subparagraph
+- `after-skip` for the same six levels
+
+The class defaults observed locally are:
+
+```tex
+style / before-skip = { 24pt, 18pt, 12pt, 12pt, 12pt, 12pt },
+style / after-skip  = { 18pt, 12pt, 6pt,  6pt,  6pt,  6pt  }
+```
+
+For Chinese undergraduate thesis drafts, the following style override is often preferable because it keeps lower-level headings at small-four size and gives subsection/subsubsection headings more even vertical spacing:
+
+```tex
+style = {
+  cjk-font = fandol,
+  latin-font = gyre,
+  subsec-zihao = -4,
+  subsubsec-zihao = -4,
+  before-skip = { 24pt, 18pt, 12pt, 12pt, 12pt, 12pt },
+  after-skip  = { 18pt, 12pt, 12pt, 12pt, 6pt,  6pt  }
+}
+```
+
+When reviewing a thesis that uses many `\subsection` or `\subsubsection` headings, check whether the PDF shows uneven spacing around these headings. If so, suggest this override before changing the class file.
 
 ## Sample PDF Observations
 
