@@ -1,0 +1,7 @@
+interface:
+  display_name: "西电毕设"
+  short_description: "辅助西电本科毕业论文的写作、排版与审查"
+  default_prompt: "Use $xdu-thesis-skill to review and improve my Xidian undergraduate thesis LaTeX draft."
+
+policy:
+  allow_implicit_invocation: true
